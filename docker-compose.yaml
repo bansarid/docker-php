@@ -1,12 +1,12 @@
 services:
     # nginx
     web:
-        image: garyclarke/nginx-php:1.0
+        image: nginx-php:1.0
         ports:
             - "80:80"
     # php
     app:
-        image: garyclarke/php-composer:1.2
+        image: php-composer:1.2
         environment:
             MYSQL_HOST: db
             MYSQL_PORT: ${MYSQL_PORT}
